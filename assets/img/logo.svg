@@ -1,0 +1,77 @@
+<svg width="500" height="500" viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="clip_001">
+      <circle cx="0" cy="0" r="90" />
+    </clipPath>
+  </defs>
+
+  <!-- Fundo -->
+  <circle cx="0" cy="0" r="90" fill="#0F172A" />
+  
+  <!-- Grid e Eixos (Com Recorte Aplicado) -->
+  <g clip-path="url(#clip_001)">
+    <g fill="none">
+      <!-- Grid -->
+      <g stroke="#2563EB" stroke-width="1">
+        <g stroke-opacity="0.2">
+      <path d="M10.00 -100 Q21.50 0 10.00 100" />
+      <path d="M-10.00 -100 Q-21.50 0 -10.00 100" />
+      <path d="M20.00 -100 Q43.00 0 20.00 100" />
+      <path d="M-20.00 -100 Q-43.00 0 -20.00 100" />
+      <path d="M30.00 -100 Q64.50 0 30.00 100" />
+      <path d="M-30.00 -100 Q-64.50 0 -30.00 100" />
+      <path d="M40.00 -100 Q86.00 0 40.00 100" />
+      <path d="M-40.00 -100 Q-86.00 0 -40.00 100" />
+      <path d="M50.00 -100 Q107.50 0 50.00 100" />
+      <path d="M-50.00 -100 Q-107.50 0 -50.00 100" />
+      <path d="M60.00 -100 Q129.00 0 60.00 100" />
+      <path d="M-60.00 -100 Q-129.00 0 -60.00 100" />
+      <path d="M70.00 -100 Q150.50 0 70.00 100" />
+      <path d="M-70.00 -100 Q-150.50 0 -70.00 100" />
+      <path d="M80.00 -100 Q172.00 0 80.00 100" />
+      <path d="M-80.00 -100 Q-172.00 0 -80.00 100" />
+        </g>
+        <g stroke-opacity="0">
+      <path d="M-100 -10.00 Q0 -21.50 100 -10.00" />
+      <path d="M-100 10.00 Q0 21.50 100 10.00" />
+      <path d="M-100 -20.00 Q0 -43.00 100 -20.00" />
+      <path d="M-100 20.00 Q0 43.00 100 20.00" />
+      <path d="M-100 -30.00 Q0 -64.50 100 -30.00" />
+      <path d="M-100 30.00 Q0 64.50 100 30.00" />
+      <path d="M-100 -40.00 Q0 -86.00 100 -40.00" />
+      <path d="M-100 40.00 Q0 86.00 100 40.00" />
+      <path d="M-100 -50.00 Q0 -107.50 100 -50.00" />
+      <path d="M-100 50.00 Q0 107.50 100 50.00" />
+      <path d="M-100 -60.00 Q0 -129.00 100 -60.00" />
+      <path d="M-100 60.00 Q0 129.00 100 60.00" />
+      <path d="M-100 -70.00 Q0 -150.50 100 -70.00" />
+      <path d="M-100 70.00 Q0 150.50 100 70.00" />
+      <path d="M-100 -80.00 Q0 -172.00 100 -80.00" />
+      <path d="M-100 80.00 Q0 172.00 100 80.00" />
+        </g>
+      </g>
+      <!-- Eixos -->
+      <g stroke="#FFFFFF" stroke-width="1.5">
+        <line x1="0" y1="-100" x2="0" y2="100" stroke-opacity="0.5" />
+        <line x1="-100" y1="0" x2="100" y2="0" stroke-opacity="0" />
+      </g>
+    </g>
+  </g>
+
+  <!-- Borda do Círculo -->
+  <circle cx="0" cy="0" r="90" 
+    fill="none" 
+    stroke="#A6A6A6" 
+    stroke-width="0.5" 
+  />
+  
+  <!-- Logo Principal -->
+  <g transform="translate(0, -5) scale(1.05)">
+    <g transform="translate(0, 50)">
+      <path d="M0 -104 L-61 15 L0 -11 L61 15 Z" fill="#2563EB" />
+    </g>
+    <g transform="translate(0, 39)">
+      <path d="M-71 60 L0 -1 L71 60 Z" fill="#2563EB" />
+    </g>
+  </g>
+</svg>

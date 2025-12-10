@@ -1,0 +1,45 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E293B;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2563EB" stroke-width="0.5" stroke-opacity="0.2"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#grad1)" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  
+  <!-- Abstract Infrastructure Lines -->
+  <g stroke="#2563EB" stroke-width="2" stroke-linecap="round" filter="url(#glow)">
+    <!-- Main lines representing structure -->
+    <path d="M 100 500 L 100 400 L 200 300 L 400 300 L 600 100" stroke-opacity="0.6" fill="none"/>
+    <path d="M 150 600 L 150 450 L 300 300" stroke-opacity="0.4" fill="none"/>
+    <path d="M 50 250 L 200 250 L 250 200 L 600 200" stroke-opacity="0.5" fill="none"/>
+    
+    <!-- Connection points -->
+    <circle cx="100" cy="400" r="4" fill="#2563EB" />
+    <circle cx="200" cy="300" r="4" fill="#2563EB" />
+    <circle cx="400" cy="300" r="4" fill="#2563EB" />
+    <circle cx="600" cy="100" r="6" fill="#F8FAFC" />
+    
+    <circle cx="250" cy="200" r="4" fill="#2563EB" />
+    <circle cx="200" cy="250" r="3" fill="#2563EB" />
+  </g>
+  
+  <!-- Subtle Data streams -->
+  <g stroke="#F8FAFC" stroke-width="1" stroke-dasharray="4 6" stroke-opacity="0.3">
+    <line x1="0" y1="100" x2="800" y2="100" />
+    <line x1="0" y1="500" x2="800" y2="500" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+  </g>
+</svg>
