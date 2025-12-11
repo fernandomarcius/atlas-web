@@ -47,4 +47,17 @@ document.addEventListener('DOMContentLoaded', () => {
   staggerContainers.forEach(container => {
     staggerObserver.observe(container);
   });
+
+  // Mobile Menu Toggle
+  const mobileBtn = document.querySelector('.mobile-menu-btn');
+  const nav = document.querySelector('.nav');
+
+  if (mobileBtn && nav) {
+    mobileBtn.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      mobileBtn.classList.toggle('active');
+      // Optional: keep text change if desired, or rely on CSS icon transformation
+      mobileBtn.textContent = nav.classList.contains('active') ? '✕' : '☰';
+    });
+  }
 });

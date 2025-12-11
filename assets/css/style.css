@@ -191,6 +191,107 @@ a {
   color: var(--accent-primary);
 }
 
+/* Mobile Menu Toggle */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1002;
+}
+
+/* Mobile Header Styles */
+@media (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .mobile-menu-btn.active {
+    transform: rotate(90deg);
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    /* Deep Premium Gradient */
+    background: linear-gradient(135deg, #0F172A 0%, #020617 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Centered visually */
+    padding: 0;
+    transition: right 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav a {
+    margin-left: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    /* Adjusted for better fit */
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 2.5rem;
+    /* Increased spacing */
+    opacity: 0;
+    transform: translateY(30px);
+    /* Slide up effect */
+    transition: all 0.4s ease;
+    letter-spacing: -0.02em;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .nav.active a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Premium Hover Effect */
+  .nav a:hover {
+    color: #fff;
+    transform: scale(1.05);
+    /* Subtle scale instead of move */
+    text-shadow: 0 0 30px rgba(37, 99, 235, 0.6);
+  }
+
+  /* Remove side line for centered layout */
+  .nav a:hover::before {
+    display: none;
+  }
+
+  /* Staggered Delays */
+  .nav.active a:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+
+  .nav.active a:nth-child(2) {
+    transition-delay: 0.15s;
+  }
+
+  .nav.active a:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+
+  .nav.active a:nth-child(4) {
+    transition-delay: 0.25s;
+  }
+}
+
 /* Sections */
 .section {
   padding: var(--spacing-section) 0;
@@ -385,9 +486,7 @@ a {
     gap: 2rem;
   }
 
-  .nav {
-    display: none;
-  }
+
 
   /* Simple hiding for MVP */
 }
