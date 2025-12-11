@@ -1,38 +1,50 @@
-// Simple Scroll Reveal Animation
 document.addEventListener('DOMContentLoaded', () => {
+  // Apple-Style Scroll Observer
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px"
+    threshold: 0.1, // Trigger when 10% visible
+    rootMargin: "0px 0px -50px 0px" // Trigger slightly before it hits bottom
   };
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
+        // Optional: Stop observing once visible to save performance (Apple style is usually one-way)
         observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  // Add fade-in class to elements we want to animate
-  const elementsToAnimate = document.querySelectorAll('.card, .feature-row, .section-header, .hero-content');
-  elementsToAnimate.forEach(el => {
-    el.classList.add('fade-in-section');
+  // Select all elements with the data-animation attribute
+  const animatedElements = document.querySelectorAll('[data-animation]');
+
+  if (animatedElements.length === 0) {
+    console.warn('No animated elements found. Make sure to add [data-animation] attributes to HTML.');
+  }
+
+  animatedElements.forEach(el => {
     observer.observe(el);
   });
-});
 
-// Add animation styles dynamically
-const style = document.createElement('style');
-style.innerHTML = `
-  .fade-in-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  }
-  .fade-in-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-document.head.appendChild(style);
+  // Handle Staggered Parents
+  // If a container has .stagger-container, we observe it, and when it triggers, 
+  // we make its children visible (relying on CSS delays)
+  const staggerContainers = document.querySelectorAll('.stagger-container');
+
+  const staggerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Find all stagger-items inside this container and animate them
+        const items = entry.target.querySelectorAll('.stagger-item');
+        items.forEach(item => {
+          item.classList.add('visible');
+        });
+        staggerObserver.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  staggerContainers.forEach(container => {
+    staggerObserver.observe(container);
+  });
+});

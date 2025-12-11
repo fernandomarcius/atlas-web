@@ -16,6 +16,7 @@
     rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
 </head>
 
 <body>
@@ -37,13 +38,15 @@
     <!-- Hero Section -->
     <section id="hero" class="hero">
       <div class="container hero-content">
-        <h1 class="hero-title">Infraestrutura de Inteligência para <span class="text-gradient">Grandes Operações.</span>
+        <h1 class="hero-title" data-animation="reveal-text">Infraestrutura de Inteligência para <span
+            class="text-gradient">Grandes Operações.</span>
         </h1>
-        <p class="hero-subtitle">
+        <p class="hero-subtitle" data-animation="reveal-up">
           Pare de perder dinheiro para o caos. Nós instalamos a engenharia de dados e matemática que sua empresa precisa
           para tomar decisões sozinhas.
         </p>
-        <a href="contato.html" class="btn btn-primary">Agendar Conversa Técnica</a>
+        <a href="contato.html" class="btn btn-primary" data-animation="reveal-up"
+          style="transition-delay: 0.2s;">Agendar Conversa Técnica</a>
       </div>
       <div class="hero-bg-overlay"></div>
     </section>
@@ -52,7 +55,7 @@
     <section class="section">
       <div class="container">
         <div class="two-col-grid" style="align-items: center; margin-top: 0;">
-          <div class="text-block">
+          <div class="text-block" data-animation="reveal-up">
             <span class="section-tag">Sobre Nós</span>
             <h2 class="section-title">Infraestrutura Invisível</h2>
             <p>Enquanto consultorias tradicionais entregam diagnósticos em slides, a Atlas entrega código e matemática
@@ -61,7 +64,7 @@
             <a href="sobre.html" class="btn" style="border: 1px solid rgba(255,255,255,0.2);">Conheça nossa
               filosofia</a>
           </div>
-          <div class="feature-visual" style="height: 300px;">
+          <div class="feature-visual" style="height: 300px;" data-animation="reveal-zoom">
             <img src="assets/img/infrastructure.svg" alt="Infraestrutura Invisível"
               style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
           </div>
@@ -72,27 +75,27 @@
     <!-- The Grid Section -->
     <section id="grid" class="section section-dark">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animation="reveal-up">
           <span class="section-tag">Camada 1</span>
           <h2 class="section-title">O Grid: <span class="text-highlight">Estruturação & Visibilidade</span></h2>
           <p class="section-desc">Transformamos o caos em um caminho navegável. Desenhamos as linhas meridianas do seu
             negócio.</p>
         </div>
 
-        <div class="grid-layout">
-          <div class="card">
+        <div class="grid-layout stagger-container">
+          <div class="card stagger-item" data-animation="reveal-up">
             <div class="card-icon">01</div>
             <h3>Consultoria de Gestão</h3>
             <p>Antes de automatizar, organizamos. Identificamos gargalos e padronizamos fluxos para que a tecnologia
               tenha onde tracionar.</p>
           </div>
-          <div class="card">
+          <div class="card stagger-item" data-animation="reveal-up">
             <div class="card-icon">02</div>
             <h3>Engenharia de Dados</h3>
             <p>A base do Titã. Pipelines robustos que suportam o peso massivo das informações com integridade e
               disponibilidade.</p>
           </div>
-          <div class="card">
+          <div class="card stagger-item" data-animation="reveal-up">
             <div class="card-icon">03</div>
             <h3>DataViz</h3>
             <p>Instrumentos de controle visual. Contraste de dados iluminados sobre fundo escuro para foco total na
@@ -105,31 +108,31 @@
     <!-- The Ascension Section -->
     <section id="ascension" class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animation="reveal-up">
           <span class="section-tag">Camada 2</span>
           <h2 class="section-title">A Ascensão: <span class="text-highlight">Inteligência & Automação</span></h2>
           <p class="section-desc">A agulha da bússola que aponta a direção e executa o movimento.</p>
         </div>
 
         <div class="feature-row">
-          <div class="feature-content">
+          <div class="feature-content" data-animation="reveal-up">
             <h3>ChatOps com IA</h3>
             <p>Removemos a fricção entre operador e sistema. Equipes executam comandos complexos de infraestrutura
               através de linguagem natural.</p>
           </div>
-          <div class="feature-visual">
+          <div class="feature-visual" data-animation="reveal-zoom">
             <img src="assets/img/chatops.png" alt="Interface ChatOps"
               style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
           </div>
         </div>
 
         <div class="feature-row reverse">
-          <div class="feature-content">
+          <div class="feature-content" data-animation="reveal-up">
             <h3>Decisões Autônomas</h3>
             <p>Além do "se/então". Agentes que analisam cenários e tomam decisões autônomas dentro de parâmetros de
               governança.</p>
           </div>
-          <div class="feature-visual">
+          <div class="feature-visual" data-animation="reveal-zoom">
             <img src="assets/img/agents.png" alt="Rede de Agentes Autônomos"
               style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
           </div>
@@ -140,13 +143,13 @@
     <!-- The North Section -->
     <section id="north" class="section section-dark">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-animation="reveal-up">
           <span class="section-tag">Camada 3</span>
           <h2 class="section-title">O Norte: <span class="text-highlight">Otimização Matemática</span></h2>
           <p class="section-desc">Razão técnica pura. Operations Research para resolver problemas combinatórios
             complexos.</p>
         </div>
-        <div class="north-content">
+        <div class="north-content" data-animation="reveal-zoom">
           <p class="highlight-text">"Não entregamos uma 'boa opção', mas a solução <span
               class="text-gradient">matematicamente ótima</span>."</p>
         </div>
@@ -155,7 +158,7 @@
 
     <!-- CTA Section -->
     <section class="section">
-      <div class="container" style="text-align: center;">
+      <div class="container" style="text-align: center;" data-animation="reveal-up">
         <h2 class="section-title" style="margin-bottom: 2rem;">Pronto para escalar a complexidade?</h2>
         <p class="section-desc" style="margin-bottom: 3rem;">Agende uma conversa técnica com nossos engenheiros.</p>
         <a href="contato.html" class="btn btn-primary">Falar com Especialistas</a>
