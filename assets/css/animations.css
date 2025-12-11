@@ -1,18 +1,21 @@
 /* Apple-Style Animations */
 
 /* Base Logic for Observers */
-[data-animation] {
+[data-animation],
+.stagger-item {
     opacity: 0;
     will-change: opacity, transform;
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* 1. Reveal Up (Default) */
-[data-animation="reveal-up"] {
+[data-animation="reveal-up"],
+.stagger-item {
     transform: translateY(30px);
 }
 
-[data-animation="reveal-up"].visible {
+[data-animation="reveal-up"].visible,
+.stagger-item.visible {
     opacity: 1;
     transform: translateY(0);
 }
