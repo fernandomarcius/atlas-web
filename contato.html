@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato | Atlas</title>
-    <meta name="description" content="Entre em contato com a Atlas. Vamos construir a infraestrutura do seu futuro." />
+    <meta name="description" content="Inicie o protocolo de transformação. Fale com a engenharia da Atlas." />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
 </head>
 
 <body>
@@ -34,11 +35,16 @@
     </header>
 
     <main>
+        <!-- Command Center Hero -->
         <section class="hero hero-small">
             <div class="container hero-content">
-                <h1 class="hero-title">Vamos <span class="text-gradient">Conversar.</span></h1>
-                <p class="hero-subtitle">
-                    Sua empresa está pronta para a próxima camada de inteligência?
+                <span class="section-tag" style="justify-content: center; margin-bottom: 1.5rem;"
+                    data-animation="reveal-up">Uplink Seguro</span>
+                <h1 class="hero-title" data-animation="reveal-text">Iniciar <span
+                        class="text-gradient">Protocolo.</span></h1>
+                <p class="hero-subtitle" data-animation="reveal-up">
+                    Você está prestes a conectar sua operação à infraestrutura Atlas.
+                    Preencha os parâmetros abaixo para inicializar o diagnóstico de engenharia.
                 </p>
             </div>
             <div class="hero-bg-overlay"></div>
@@ -46,28 +52,74 @@
 
         <section class="section">
             <div class="container contact-container">
-                <form class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input type="text" id="name" placeholder="Seu nome completo">
+                <!-- Left: The Terminal Form -->
+                <form class="contact-form stagger-container" data-animation="reveal-up">
+                    <div class="form-header"
+                        style="margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">
+                        <h3 style="font-family: monospace; color: var(--accent-primary);">Solicitação de Diagnóstico
+                        </h3>
                     </div>
-                    <div class="form-group">
+
+                    <div class="form-group stagger-item">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" placeholder="Seu nome" class="input-code">
+                    </div>
+
+                    <div class="form-group stagger-item">
                         <label for="email">Email Corporativo</label>
-                        <input type="email" id="email" placeholder="voce@empresa.com">
+                        <input type="email" id="email" placeholder="nome@empresa.com" class="input-code">
                     </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" rows="5" placeholder="Conte-nos sobre seu desafio..."></textarea>
+
+                    <div class="form-group stagger-item">
+                        <label for="role">Cargo / Função</label>
+                        <input type="text" id="role" placeholder="Ex: CTO, CEO, Diretor de Operações"
+                            class="input-code">
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+
+                    <div class="form-group stagger-item">
+                        <label for="maturity">Estágio de Infraestrutura de Dados</label>
+                        <select id="maturity" class="input-code" style="cursor: pointer;">
+                            <option value="" disabled selected>Selecione o cenário atual...</option>
+                            <option value="none">Manual: Gestão baseada em planilhas/processos manuais</option>
+                            <option value="siloed">Fragmentado: ERPs/CRMs sem integração centralizada</option>
+                            <option value="centralized">Centralizado: Data Warehouse/Lake estruturado</option>
+                            <option value="ai_ready">Avançado: Infraestrutura pronta para IA/Preditivo</option>
+                            <option value="unknown">Desconhecido / Preciso de diagnóstico profissional</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group stagger-item">
+                        <label for="message">Descrição do Desafio</label>
+                        <textarea id="message" rows="5"
+                            placeholder="Descreva brevemente o problema que precisa resolver..."
+                            class="input-code"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary stagger-item" style="width: 100%; margin-top: 1rem;">
+                        Enviar Solicitação
+                    </button>
                 </form>
 
-                <div class="contact-info">
-                    <h3>Headquarters</h3>
-                    <p>Avenida Paulista, 0000<br>São Paulo, SP - Brasil</p>
-                    <br>
-                    <h3>Email</h3>
-                    <p>hello@atlas.inc</p>
+                <!-- Right: Direct Link & Info -->
+                <div class="contact-info stagger-container">
+                    <div class="card stagger-item" data-animation="reveal-up"
+                        style="border-color: var(--accent-primary);">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">⚡ Canal de Emergência</h3>
+                        <p style="font-size: 0.9rem; margin-bottom: 1.5rem;">
+                            Para situações críticas ou parcerias estratégicas imediatas, acesse o canal direto da
+                            diretoria.
+                        </p>
+                        <a href="mailto:hello@atlas.inc"
+                            style="color: #fff; text-decoration: underline; font-family: monospace;">hello@atlas.inc</a>
+                    </div>
+
+                    <div class="card stagger-item" data-animation="reveal-up" style="margin-top: 2rem;">
+                        <h3>Base de Operações</h3>
+                        <p style="font-family: monospace; opacity: 0.7; margin-top: 1rem;">
+                            Avenida E, 0000<br>
+                            Goiania, GO - Brasil
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
