@@ -111,7 +111,13 @@ a {
 .btn-primary {
   background: var(--accent-primary);
   color: var(--text-inverse);
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  font-weight: 800;
+  /* Extra bold for visibility */
+  font-size: 1rem;
+  padding: 1.2rem 2.5rem;
+  /* Larger button */
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-primary:hover {
